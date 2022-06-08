@@ -1,2 +1,2 @@
 # C++ Practice
-#### Re-learning C++ with projects.
+#### C++ stuff I did.
