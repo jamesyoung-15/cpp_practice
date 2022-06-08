@@ -55,7 +55,7 @@ int Init() {
     return 0;
 }
 
-// TODO Add() a new student with major
+// Add() a new student with major
 int Add() {
     string in_name;
     int major_num;
@@ -145,7 +145,7 @@ int Add() {
 }
 
 
-
+//Search by input the name 
 int Search() {
     node* head = h->head;
     node* tail = h->tail;
@@ -154,7 +154,6 @@ int Search() {
     cin >> name;
     node* now_node = head;
    
-    // TODO Search by input the name 
     cout<<"Returned Results: " << endl;
 
     //if head is empty, no linked list
@@ -171,13 +170,13 @@ int Search() {
     return 0;
 }
 
+// Print all students information
 void Print() {
     node* head = h->head;
     node* tail = h->tail;
     node* now_node = head;
     cout << "Students Information:" << endl;
     
-    // TODO Print all students information
 
     //if linked list is empty
     if(now_node == nullptr)
@@ -192,6 +191,7 @@ void Print() {
    
 }
 
+// Print students with same major
 int Print_By_Major(){ 
     string in_major;
     cout<< "Please input major:"<<endl;
@@ -199,13 +199,11 @@ int Print_By_Major(){
     majors m= Print_Major(in_major);
     node* ptr=nullptr;
 
-   
-    // TODO Print students with same major
 
 
     cout << "Students Information:" << endl;
 
-    if(in_major == "elec")
+    if(in_major == "ELEC")
     {
         ptr = h->elec_pointer;
         while (ptr != nullptr)
@@ -214,12 +212,12 @@ int Print_By_Major(){
             ptr = ptr->next_sm;
         }
     }
-    else if (in_major == "civl")
+    else if (in_major == "CIVL")
     {
         ptr = h->civl_pointer;
         while (ptr != nullptr)
         {
-            cout<<"Name:"<<ptr->name<<" Major:" << ptr->major << endl;
+            cout<<"Name:"<<ptr->name<<" Major:" << Print_Key(ptr->major) << endl;
             ptr = ptr->next_sm;
         }
     }
@@ -228,7 +226,7 @@ int Print_By_Major(){
         ptr = h->dsct_pointer;
         while (ptr != nullptr)
         {
-            cout<<"Name:"<<ptr->name<<" Major:" << ptr->major << endl;
+            cout<<"Name:"<<ptr->name<<" Major:" << Print_Key(ptr->major) << endl;
             ptr = ptr->next_sm;
         }
     }
@@ -237,7 +235,6 @@ int Print_By_Major(){
         cout<<"Invalid input"<<endl;
     }
     
-    // TODO Print students with same major
 
 
     return 0;    
@@ -257,7 +254,7 @@ void Delete_ALL(node*& head){
     }
 
 
-    // TODO Delete ALL studnets 
+    // Delete ALL students 
 
 
 }
